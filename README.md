@@ -19,7 +19,7 @@
 I have a soft spot for **Linux** and have explored a variety of distributions. I've used **Ubuntu** and **Arch Linux** & their other flavors. Customizing (ricing) these distros is a hobby I truly enjoy.
 
 ## 📫 Let's Connect
-- [LinkedIn]([https://www.linkedin.com/in/sheershbhatnagar/])
+- [LinkedIn](https://www.linkedin.com/in/sheershbhatnagar/)
 
 
 <!--
