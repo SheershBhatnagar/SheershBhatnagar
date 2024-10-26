@@ -67,15 +67,13 @@
 
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=grey">
-<img align="right" alt="Static Badge" src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=grey">
-<img align="right" alt="Static Badge" src="https://img.shields.io/badge/HTML-ff6347?style=for-the-badge&logo=html5&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Python-22496A?style=for-the-badge&logo=python&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Dart-blue?style=for-the-badge&logo=dart&logoColor=white&labelColor=grey">
 
 **Programming**
 
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Flask-lightgrey?style=for-the-badge&logo=flask&logoColor=white&labelColor=grey">
-<img align="right" alt="Static Badge" src="https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=grey">
+<img align="right" alt="Static Badge" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Flutter-blue?style=for-the-badge&logo=flutter&logoColor=white&labelColor=grey">
 
 **Frameworks**
@@ -87,11 +85,17 @@
 
 **Database**
 
+<img align="right" alt="Static Badge" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/PhpMyAdmin-6C78AF?style=for-the-badge&logo=phpmyadmin&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Git-tomato?style=for-the-badge&logo=git&logoColor=white&labelColor=grey">
 
 **Tools**
+
+<img align="right" alt="Static Badge" src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=grey">
+<img align="right" alt="Static Badge" src="https://img.shields.io/badge/HTML-ff6347?style=for-the-badge&logo=html5&logoColor=white&labelColor=grey">
+
+**Markup Languages**
 
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white&labelColor=grey">
 
