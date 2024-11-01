@@ -39,6 +39,8 @@
   <a href="#"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SheershBhatnagar&theme=tokyonight&show_icons=true&hide_border=true&layout=compact"></a>
 </p>
 
+[![An image of @sheershbhatnagar's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/sheershbhatnagar)](https://holopin.io/@sheershbhatnagar)
+
 <p align='center'>
   💻 :zap: My workspace specs<br/><br/>
   <img alt="Static Badge" src="https://img.shields.io/badge/ENVY%2013%22%20x360-blue?style=for-the-badge&logo=hp&logoColor=white&labelColor=grey">
