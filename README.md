@@ -12,6 +12,7 @@
 
 <div align='center'>
   <img alt="GitHub User's stars" src="https://img.shields.io/github/stars/SheershBhatnagar">
+  &nbsp
   <img alt="GitHub followers" src="https://img.shields.io/github/followers/SheershBhatnagar">
 </div>
 
