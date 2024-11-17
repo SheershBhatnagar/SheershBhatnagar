@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  webapp:
+    build:
+      context: ./flutter
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+      - db
+    networks:
+      - app-network
+    restart: on-failure
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5433/sheershbhatnagar
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
+    restart: on-failure
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
+
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    ports:
+      - "5433:5433"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: sheershbhatnagar
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: on-failure
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
