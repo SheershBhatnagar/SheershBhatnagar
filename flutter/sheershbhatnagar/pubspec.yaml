@@ -1,5 +1,5 @@
 name: sheershbhatnagar
-description: "A new Flutter project."
+description: "Sheersh Bhatnagar's Portfolio Website"
 publish_to: 'none'
 version: 0.1.0
 
@@ -7,13 +7,26 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
+  dio: ^5.7.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.14
 
 dev_dependencies:
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+
+fonts:
+  - family: HostGrotesk
+    fonts:
+      - asset: assets/fonts/hostgrotesk/HostGrotesk-Regular.ttf
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/poppins/Poppins-Regular.ttf

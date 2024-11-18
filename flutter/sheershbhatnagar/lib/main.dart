@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:sheershbhatnagar/screens/home.dart';
+import 'package:sheershbhatnagar/screens/parallaxpage.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,10 +12,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sheersh Bhatnagar',
-      home: HomeScreen(),
+      darkTheme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+      ),
+      home: const SafeArea(
+        child: HomePage(),
+      ),
     );
   }
 }
