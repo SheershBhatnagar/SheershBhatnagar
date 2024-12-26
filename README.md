@@ -81,7 +81,6 @@
 
 **Frameworks**
 
-<img align="right" alt="Static Badge" src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/Firebase-yellow?style=for-the-badge&logo=firebase&logoColor=yellow&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/PostgreSQL-699eca?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=grey">
@@ -95,6 +94,7 @@
 
 **Tools**
 
+<img align="right" alt="Static Badge" src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=grey">
 <img align="right" alt="Static Badge" src="https://img.shields.io/badge/HTML-ff6347?style=for-the-badge&logo=html5&logoColor=white&labelColor=grey">
 
