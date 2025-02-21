@@ -57,7 +57,7 @@
 </p>
 
 <p align='center'>
-  📫 How to reach me: <a href='mailto:i@sheershbhatnagar.me'>i@sheershbhatnagar.me</a>
+  📫 How to reach me: <a href='mailto:i@sheershbhatnagar.me'>sheershbhatnagar2@zohomail.in</a>
 </p>
 
 <!--<br>
