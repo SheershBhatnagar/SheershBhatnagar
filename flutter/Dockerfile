@@ -5,7 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy Flutter build output to Nginx's static content directory
-COPY sheershbhatnagar/build/web /usr/share/nginx/html
+COPY build/web /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
