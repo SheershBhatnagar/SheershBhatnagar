@@ -34,14 +34,6 @@ class _LandingScreenState extends State<LandingScreen> {
     setState(() => _currentIndex = index);
   }
 
-  void _onNavTap(int index) {
-    _pageController.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 600),
-      curve: Curves.easeInOut,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
