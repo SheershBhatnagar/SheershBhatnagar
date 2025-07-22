@@ -1,0 +1,16 @@
+flutter/.dart_tool/
+flutter/.packages
+flutter/.flutter-plugins
+flutter/.flutter-plugins-dependencies
+flutter/.metadata
+flutter/.idea/
+flutter/.vscode/
+flutter/.DS_Store
+flutter/.pub-cache/
+flutter/.pub-cache.lock
+flutter/.pub/
+.DS_Store
+.idea/
+.vscode/
+flutter/build/.DS_Store
+flutter/assets/.DS_Store

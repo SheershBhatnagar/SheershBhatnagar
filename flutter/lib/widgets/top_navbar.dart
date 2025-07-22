@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:portfolio/screens/project/single_project_screen.dart';
-import 'package:portfolio/screens/terms_and_policies/privacy_policy_screen.dart';
-import 'package:portfolio/screens/terms_and_policies/terms_and_conditions_screen.dart';
 import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/widgets/button_primary.dart';
 
@@ -33,7 +30,13 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> navTitles = ['HOME', 'RESUME', 'PROJECTS', 'BLOG', 'CONTACT'];
+    final List<String> navTitles = [
+      'HOME',
+      'RESUME',
+      // 'PROJECTS',
+      // 'BLOG',
+      'CONTACT',
+    ];
 
     AppColors appColors = AppColors();
 
@@ -65,22 +68,22 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
                   );
                 }),
               ),
-              Row(
-                children: [
-                  _NavItem(
-                    onTap: () {
-                      GoRouter.of(context).go('/terms');
-                    },
-                    title: 'TERMS',
-                  ),
-                  _NavItem(
-                    onTap: () {
-                      GoRouter.of(context).go('/privacy');
-                    },
-                    title: 'PRIVACY',
-                  ),
-                ],
-              ),
+              // Row(
+              //   children: [
+              //     _NavItem(
+              //       onTap: () {
+              //         GoRouter.of(context).go('/terms');
+              //       },
+              //       title: 'TERMS',
+              //     ),
+              //     _NavItem(
+              //       onTap: () {
+              //         GoRouter.of(context).go('/privacy');
+              //       },
+              //       title: 'PRIVACY',
+              //     ),
+              //   ],
+              // ),
             ],
           ),
 
