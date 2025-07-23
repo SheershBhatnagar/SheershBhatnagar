@@ -1,4 +1,5 @@
 .dart_tool/
+.firebase/
 .idea/
 .vscode/
 .DS_Store
@@ -6,5 +7,7 @@ build/.DS_Store
 assets/.DS_Store
 
 // Firebase configuration files
+.firebaserc
 lib/firebase_options.dart
 firebase.json
+firebase-debug.log
