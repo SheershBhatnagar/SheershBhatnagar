@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
 
     AppColors appColors = AppColors();
 
+    // TO CHANGE THE RESUME GO TO /web/files/Resume.pdf
     void downloadResume() async {
       final anchor = html.AnchorElement(href: 'files/Resume.pdf')
         ..download = 'Sheersh_Bhatnagar_Resume.pdf'
