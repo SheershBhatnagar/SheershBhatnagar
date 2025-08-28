@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
 import 'package:portfolio/utils/assets.dart';
-import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/widgets/custom_scrollbar.dart';
 import 'package:portfolio/widgets/social_links.dart';
 import 'package:portfolio/widgets/top_navbar.dart';
 
-class PrivacyPolicyScreen extends StatefulWidget {
-  const PrivacyPolicyScreen({super.key});
+class SingleBlogPostScreen extends StatefulWidget {
+  const SingleBlogPostScreen({super.key});
 
   @override
-  State<PrivacyPolicyScreen> createState() => _PrivacyPolicyScreenState();
+  State<SingleBlogPostScreen> createState() => _SingleBlogPostScreenState();
 }
 
-class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
+class _SingleBlogPostScreenState extends State<SingleBlogPostScreen> {
   final ScrollController _scrollController = ScrollController();
   bool _isScrolled = false;
 
@@ -63,7 +62,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                     child: Column(
                       children: [
                         Container(
-                          height: height * 0.75,
+                          height: height,
                           width: width,
                           decoration: BoxDecoration(
                             image: DecorationImage(
@@ -80,35 +79,24 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              RichText(
-                                text: TextSpan(
-                                  text: 'Updated: ',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontFamily: 'Gilroy',
-                                  ),
-                                  children: <TextSpan>[
-                                    TextSpan(
-                                      text: '25th May, 2025',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.red,
-                                        fontFamily: 'Gilroy',
-                                      ),
-                                    ),
-                                  ],
+                              Text(
+                                '25th May, 2025',
+                                style: TextStyle(
+                                  fontSize: 12,
                                 ),
                               ),
                               SizedBox(height: 10),
-                              Text(
-                                'Privacy Policy',
-                                style: TextStyle(
-                                  fontSize: 60,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                  fontFamily: 'Gilroy',
-                                  letterSpacing: 2,
+                              SizedBox(
+                                width: width * 0.4,
+                                child: Text(
+                                  'Secrets of the Serpents',
+                                  style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                    fontFamily: 'Gilroy',
+                                    letterSpacing: 2,
+                                  ),
                                 ),
                               ),
                             ],

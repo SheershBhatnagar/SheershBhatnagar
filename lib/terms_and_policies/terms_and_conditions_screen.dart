@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:portfolio/utils/assets.dart';
-import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/widgets/custom_scrollbar.dart';
 import 'package:portfolio/widgets/social_links.dart';
 import 'package:portfolio/widgets/top_navbar.dart';
