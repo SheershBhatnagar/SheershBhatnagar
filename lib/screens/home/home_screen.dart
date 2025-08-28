@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 
 import 'package:portfolio/utils/assets.dart';
@@ -13,6 +15,12 @@ class HomeScreen extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     AppColors appColors = AppColors();
+
+    void downloadResume() async {
+      final anchor = html.AnchorElement(href: 'files/Resume.pdf')
+        ..download = 'Sheersh_Bhatnagar_Resume.pdf'
+        ..click();
+    }
 
     return Container(
       height: height,
@@ -67,9 +75,10 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ButtonPrimary(
-                onPressed: () {},
+                onPressed: downloadResume,
                 text: 'DOWNLOAD RESUME',
               ),
+              const SizedBox(height: 30),
             ],
           ),
 

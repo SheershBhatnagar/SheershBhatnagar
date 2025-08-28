@@ -43,7 +43,7 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       height: preferredSize.height - 20,
       padding: const EdgeInsets.symmetric(horizontal: 50),
-      color: isScrolled ? appColors.backgroundColor : Colors.transparent,
+      color: currentIndex != 2 ? appColors.backgroundColor : Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

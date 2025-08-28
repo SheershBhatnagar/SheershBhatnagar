@@ -5,8 +5,10 @@
 .DS_Store
 build/.DS_Store
 assets/.DS_Store
+.flutter-plugins
+.flutter-plugins-dependencies
 
-// Firebase configuration files
+/ Firebase configuration files
 .firebaserc
 lib/firebase_options.dart
 firebase.json
