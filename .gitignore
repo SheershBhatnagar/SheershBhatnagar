@@ -11,6 +11,6 @@ assets/.DS_Store
 
 / Firebase configuration files
 .firebaserc
-lib/firebase_options.dart
+#lib/firebase_options.dart
 firebase.json
 firebase-debug.log
