@@ -91,6 +91,8 @@ class TopNavBar extends StatelessWidget implements PreferredSizeWidget {
           ButtonPrimary(
             onPressed: () {
               _onNavTap(4);
+
+              throw Exception();
             },
             text: "LET'S TALK",
           ),
