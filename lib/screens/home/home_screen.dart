@@ -37,9 +37,10 @@ class HomeScreen extends StatelessWidget {
           // NAME
           Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 150),
               Text('Full Stack Flutter Developer'),
               const SizedBox(height: 20),
               RichText(
@@ -65,9 +66,9 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               SizedBox(
-                width: width * 0.18,
+                width: width * 0.25,
                 child: Text(
-                  'Working with client and community, we deliver master plans that create vibrant new places and spaces, attract people, and encourage.',
+                  'Aspiring Flutter Developer eager to learn and grow in the world of mobile app development. Passionate about creating user-friendly, cross-platform mobile applications.',
                   style: TextStyle(
                     fontSize: 11,
                     color: appColors.fontDisableColor,

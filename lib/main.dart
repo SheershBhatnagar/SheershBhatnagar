@@ -8,12 +8,13 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:portfolio/app_bloc_observer.dart';
+import 'package:portfolio/cubits/navigation/navigation_cubit.dart';
 import 'package:portfolio/firebase_options.dart';
 import 'package:portfolio/screens/landing_screen.dart';
 import 'package:portfolio/screens/blog/single_blogpost_screen.dart';
 import 'package:portfolio/screens/project/single_project_screen.dart';
-import 'package:portfolio/terms_and_policies/privacy_policy_screen.dart';
-import 'package:portfolio/terms_and_policies/terms_and_conditions_screen.dart';
+import 'package:portfolio/screens/terms_and_policies/privacy_policy_screen.dart';
+import 'package:portfolio/screens/terms_and_policies/terms_and_conditions_screen.dart';
 import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/widgets/custom_scrollbar.dart';
 
@@ -76,21 +77,28 @@ class MyApp extends StatelessWidget {
       ],
     );
 
-    return MaterialApp.router(
-      routerConfig: _router,
-      title: 'Sheersh Bhatnagar',
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Gilroy',
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => NavigationCubit(),
+        ),
+      ],
+      child: MaterialApp.router(
+        routerConfig: _router,
+        title: 'Sheersh Bhatnagar',
+        theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: 'Gilroy',
+        ),
+        themeMode: ThemeMode.dark,
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.red,
+          scaffoldBackgroundColor: appColors.backgroundColor,
+          fontFamily: 'Gilroy',
+        ),
+        scrollBehavior: NoScrollbarScrollBehavior(),
       ),
-      themeMode: ThemeMode.dark,
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.red,
-        scaffoldBackgroundColor: appColors.backgroundColor,
-        fontFamily: 'Gilroy',
-      ),
-      scrollBehavior: NoScrollbarScrollBehavior(),
     );
   }
 }

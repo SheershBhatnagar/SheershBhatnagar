@@ -1,10 +1,21 @@
 part of 'navigation_cubit.dart';
 
-sealed class NavigationState extends Equatable {
-  const NavigationState();
-}
+class NavigationState {
+  final int currentIndex;
+  final int? hoveredIndex;
 
-final class NavigationInitial extends NavigationState {
-  @override
-  List<Object> get props => [];
+  NavigationState({
+    required this.currentIndex,
+    this.hoveredIndex,
+  });
+
+  NavigationState copyWith({
+    int? currentIndex,
+    int? hoveredIndex,
+  }) {
+    return NavigationState(
+      currentIndex: currentIndex ?? this.currentIndex,
+      hoveredIndex: hoveredIndex,
+    );
+  }
 }

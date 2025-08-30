@@ -219,9 +219,9 @@ class ResumeScreen extends StatelessWidget {
                               ),
                               SizedBox(height: 10),
                               SizedBox(
-                                width: width * 0.5,
+                                width: width * 0.47,
                                 child: Text(
-                                  'Working with client and community, we deliver master plans that create vibrant new places and spaces, attract people, and encourage.',
+                                  'Aspiring Flutter Developer eager to learn and grow in the world of mobile app development. Passionate about creating user-friendly, cross-platform mobile applications. Looking for opportunities to gain hands-on experience and collaborate with experienced professionals in the field.',
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: appColors.fontDisableColor,
@@ -775,6 +775,7 @@ class ResumeScreen extends StatelessWidget {
               // ),
 
               // Download Button
+
               SizedBox(height: 50),
               ButtonPrimary(
                 onPressed: downloadResume,
