@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import portrait from "@/assets/sheersh-portrait.jpg";
 
 const roles = ["Full Stack Flutter Developer", "Mobile App Engineer", "Cloud & DevOps Tinkerer"];
@@ -103,6 +103,14 @@ const Hero = () => {
               className="rounded-full border border-border bg-card/50 px-6 py-3 font-mono text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
             >
               get in touch
+            </a>
+            <a
+              href="/Sheersh_Bhatnagar_Resume.pdf"
+              download
+              className="group inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-6 py-3 font-mono text-sm font-semibold text-secondary transition-all hover:border-secondary hover:bg-secondary/20"
+            >
+              <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+              resume.pdf
             </a>
             <div className="flex items-center gap-3 pl-2">
               <a href="https://github.com/SheershBhatnagar" target="_blank" rel="noreferrer" aria-label="GitHub" className="text-muted-foreground transition-colors hover:text-primary">

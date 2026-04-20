@@ -162,6 +162,12 @@
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
+/* Hide native cursor when custom cursor is active */
+html.custom-cursor-active,
+html.custom-cursor-active * {
+  cursor: none !important;
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
