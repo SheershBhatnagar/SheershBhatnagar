@@ -13,6 +13,7 @@ const CustomCursor = () => {
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) return;
     setVisible(true);
+    document.documentElement.classList.add("custom-cursor-active");
     const move = (e: MouseEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
@@ -26,6 +27,7 @@ const CustomCursor = () => {
     return () => {
       window.removeEventListener("mousemove", move);
       window.removeEventListener("mouseover", over);
+      document.documentElement.classList.remove("custom-cursor-active");
     };
   }, [x, y]);
 

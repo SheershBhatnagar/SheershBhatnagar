@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { useRef } from "react";
 import SectionHeading from "./SectionHeading";
 
@@ -11,6 +11,7 @@ const projects = [
     description: "A polished iOS & Android e-commerce app for a coffee brand. Auth, Firestore-backed catalog, payment via Cashfree, and CI/CD via GitHub Actions.",
     stack: ["Flutter", "Firebase", "Cashfree", "Docker", "AWS", "GitHub Actions"],
     accent: "from-primary to-secondary",
+    github: null,
   },
   {
     name: "Gesturify",
@@ -19,6 +20,7 @@ const projects = [
     description: "Sign-language interpreter that converts hand gestures into letters & words in real time. Led a 4-person team building Flutter app + Flask ML backend.",
     stack: ["Flutter", "Flask", "Computer Vision", "REST API"],
     accent: "from-secondary to-accent",
+    github: "https://github.com/Pratyushshrivas/Gesturify",
   },
   {
     name: "Weather App",
@@ -27,6 +29,7 @@ const projects = [
     description: "Lightweight cross-platform weather app with location-based real-time forecasts via OpenWeatherAPI.",
     stack: ["Flutter", "REST API", "Geolocation"],
     accent: "from-primary to-accent",
+    github: "https://github.com/SheershBhatnagar/Weather-App",
   },
 ];
 
@@ -82,9 +85,25 @@ const Projects = () => {
                 <div className="glass relative flex h-full flex-col rounded-2xl p-6">
                   <div className="mb-4 flex items-start justify-between">
                     <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
-                    <div className="flex gap-2 opacity-60 transition-opacity group-hover:opacity-100">
-                      <Github className="h-4 w-4" />
-                      <ExternalLink className="h-4 w-4" />
+                    <div className="flex gap-2">
+                      {p.github ? (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${p.name} on GitHub`}
+                          className="text-muted-foreground transition-colors hover:text-primary"
+                        >
+                          <Github className="h-4 w-4" />
+                        </a>
+                      ) : (
+                        <span
+                          title="Link not available"
+                          className="text-muted-foreground/30"
+                        >
+                          <Github className="h-4 w-4" />
+                        </span>
+                      )}
                     </div>
                   </div>
 
