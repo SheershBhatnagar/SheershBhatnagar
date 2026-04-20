@@ -6,28 +6,25 @@ import SectionHeading from "./SectionHeading";
 const projects = [
   {
     name: "Skiá Coffee App",
-    tag: "Flutter · Firebase · Cashfree",
-    period: "Dec 2024 — Present",
-    description:
-      "A polished iOS & Android e-commerce app for a coffee brand. Auth, Firestore-backed catalog, payment via Cashfree, and CI/CD via GitHub Actions.",
-    stack: ["Flutter", "Firebase Auth", "Firestore", "Cloud Functions", "Cashfree", "GitHub Actions"],
+    tag: "Flutter · Firebase",
+    period: "December 2024 — Present",
+    description: "A polished iOS & Android e-commerce app for a coffee brand. Auth, Firestore-backed catalog, payment via Cashfree, and CI/CD via GitHub Actions.",
+    stack: ["Flutter", "Firebase", "Cashfree", "Docker", "AWS", "GitHub Actions"],
     accent: "from-primary to-secondary",
   },
   {
     name: "Gesturify",
     tag: "Flutter · Flask · Hackfinity 1.0",
-    period: "Nov — Dec 2024",
-    description:
-      "Sign-language interpreter that converts hand gestures into letters & words in real time. Led a 4-person team building Flutter app + Flask ML backend.",
+    period: "November 2024 — December 2024",
+    description: "Sign-language interpreter that converts hand gestures into letters & words in real time. Led a 4-person team building Flutter app + Flask ML backend.",
     stack: ["Flutter", "Flask", "Computer Vision", "REST API"],
     accent: "from-secondary to-accent",
   },
   {
     name: "Weather App",
     tag: "Flutter · OpenWeather API",
-    period: "Oct 2023",
-    description:
-      "Lightweight cross-platform weather app with location-based real-time forecasts via OpenWeatherAPI.",
+    period: "October 2023",
+    description: "Lightweight cross-platform weather app with location-based real-time forecasts via OpenWeatherAPI.",
     stack: ["Flutter", "REST API", "Geolocation"],
     accent: "from-primary to-accent",
   },

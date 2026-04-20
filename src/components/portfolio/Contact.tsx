@@ -26,7 +26,7 @@ const Contact = () => {
               <p>
                 <span className="text-secondary">$</span> whoami
               </p>
-              <p className="text-primary">→ sheersh bhatnagar · full-stack flutter dev</p>
+              <p className="text-primary">→ sheersh bhatnagar · full-stack flutter developer</p>
               <p className="mt-3">
                 <span className="text-secondary">$</span> cat ./reach-out.txt
               </p>

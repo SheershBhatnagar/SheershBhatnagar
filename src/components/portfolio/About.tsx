@@ -16,13 +16,13 @@ const About = () => {
               infra on the back.
             </p>
             <p>
-              Pursuing a <span className="text-foreground">Master's in Generative AI</span> at SRM
+              Completed <span className="text-foreground">Master of Computer Applications in Generative AI</span> at SRM
               University (CGPA 9.16), and constantly tinkering with cloud, DevOps, and side
               projects ranging from coffee e-commerce apps to sign-language interpreters.
             </p>
             <p className="font-mono text-sm">
               <span className="text-secondary">$</span> currently learning →{" "}
-              <span className="text-primary">LLMs, Edge AI, Rust</span>
+              <span className="text-primary">Kotlin, Kotlin Multiplatform, DevOps</span>
             </p>
           </div>
         </div>
@@ -49,8 +49,9 @@ const About = () => {
   final String location = `}<span className="text-terminal">"Jaipur, India"</span>{`;
 
   final List<String> stack = [
-    `}<span className="text-primary">"Flutter"</span>{`, `}<span className="text-primary">"Firebase"</span>{`, `}<span className="text-primary">"AWS"</span>{`,
-    `}<span className="text-primary">"Python"</span>{`, `}<span className="text-primary">"Docker"</span>{`, `}<span className="text-primary">"PostgreSQL"</span>{`,
+    `}<span className="text-primary">"Flutter"</span>{`, `}<span className="text-primary">"Firebase"</span>{`, `}<span className="text-primary">"Cloud"</span>{`,
+    `}<span className="text-primary">"Python"</span>{`, `}<span className="text-primary">"DevOps"</span>{`, `}<span className="text-primary">"PostgreSQL"</span>{`,
+    `}<span className="text-primary">"MongoDB"</span>{`,`}<span className="text-primary">"Linux"</span>{`, `}<span className="text-primary">"Git"</span>{`, `}<span className="text-primary">"IoT"</span>{`,
   ];
 
   `}<span className="text-secondary">String</span>{` build() => `}<span className="text-terminal">"things people love using"</span>{`;

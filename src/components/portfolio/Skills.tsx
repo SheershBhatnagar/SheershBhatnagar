@@ -3,14 +3,15 @@ import SectionHeading from "./SectionHeading";
 
 const groups = [
   { name: "Mobile", items: ["Flutter", "Dart", "Android", "iOS"] },
-  { name: "Backend", items: ["Python", "FastAPI", "Flask", "REST APIs", "Node.js"] },
-  { name: "Data", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firestore"] },
-  { name: "Cloud", items: ["AWS (EC2, IAM)", "GCP", "Azure", "Firebase"] },
-  { name: "DevOps", items: ["Docker", "GitHub Actions", "Nginx", "DNS Mgmt"] },
-  { name: "Other", items: ["Git", "IoT", "Linux", "GenAI"] },
+  { name: "Backend", items: ["Python", "FastAPI", "Flask", "REST API"] },
+  { name: "Data", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+  { name: "Cloud", items: ["AWS", "Azure", "GCP", "Firebase"] },
+  { name: "DevOps", items: ["Docker", "GitHub Actions", "Nginx Proxy Manager", "DNS Management"] },
+    { name: "Version Control", items: ["Git"] },
+  { name: "Other", items: ["IoT", "Linux"] },
 ];
 
-const marquee = ["Flutter", "Firebase", "AWS", "Docker", "Python", "PostgreSQL", "FastAPI", "Redis", "MongoDB", "GitHub Actions", "Nginx", "GCP", "Azure", "Dart", "REST API", "IoT"];
+const marquee = ["Flutter", "Firebase", "AWS", "Docker", "Python", "PostgreSQL", "FastAPI", "Flask", "Redis", "MongoDB", "GitHub Actions", "Nginx Proxy Manager", "GCP", "Azure", "REST API", "IoT", "Linux"];
 
 const Skills = () => {
   return (

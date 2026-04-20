@@ -49,7 +49,7 @@ const Hero = () => {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            available for opportunities · Jaipur, IN
+            available for opportunities
           </motion.div>
 
           <motion.h1
@@ -60,7 +60,7 @@ const Hero = () => {
           >
             Hi, I'm <span className="text-gradient">Sheersh</span>
             <br />
-            <span className="text-foreground/90">Bhatnagar.</span>
+            <span className="text-foreground/90">Bhatnagar</span>
           </motion.h1>
 
           <motion.div
@@ -135,7 +135,7 @@ const Hero = () => {
             <div className="glass absolute -right-4 bottom-6 z-10 hidden rounded-lg px-3 py-2 font-mono text-xs sm:block">
               <span className="text-secondary">@</span>flutter <span className="text-muted-foreground">·</span> <span className="text-primary">@aws</span>
             </div>
-            <div className="relative aspect-square overflow-hidden rounded-3xl border border-border bg-card p-2">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-2">
               <div className="absolute inset-0 rounded-3xl bg-gradient-primary opacity-50 blur-2xl" />
               <img
                 src={portrait}

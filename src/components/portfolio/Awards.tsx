@@ -5,15 +5,27 @@ import SectionHeading from "./SectionHeading";
 const awards = [
   {
     title: "Hackfinity 1.0",
-    org: "SRM University",
-    date: "Nov 2024",
+    org: "SRM Institute of Science & Technology, Chennai",
+    date: "November 2024",
     desc: "Built Gesturify with a 4-person team — converting sign-language hand gestures into words & letters in real time.",
   },
   {
     title: "Won Ideathon 3.0",
-    org: "Amity University Rajasthan",
+    org: "Amity University Rajasthan, Jaipur",
     date: "May 2022",
     desc: "Pitched and won with the concept of an online cloud-sync application.",
+  },
+  {
+    title: "Second Runner Up in Ideathon 2.0",
+    org: "Amity University Rajasthan, Jaipur",
+    date: "April 2021",
+    desc: "Secured 3rd place in Ideathon 2.0, where I pitched my idea of making a billing software even for a small vendors.",
+  },
+  {
+    title: "Programming Club - Club leader",
+    org: "Amity University Rajasthan, Jaipur",
+    date: "January 2023 - March 2023",
+    desc: "Started a programming club for juniors with my 2 other colleagues to teach development from beginning to advanced level. I taught them DNS management, AWS EC2 & Azure VMs.",
   },
 ];
 

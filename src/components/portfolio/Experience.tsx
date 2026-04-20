@@ -7,7 +7,20 @@ const items = [
     type: "work" as const,
     title: "Full Stack Flutter Developer",
     org: "Decube Innovation Labs",
-    period: "Nov 2024 — Present",
+    period: "November 2024 — Present",
+    location: "Remote",
+    points: [
+      "Designed & deployed a production-grade Android app with Flutter + Firebase, integrating real-time engagement via FCM and Analytics.",
+      "Architected secure AWS environments (EC2, IAM, Security Groups) with automated AWS Backup Plans and DNS configuration.",
+      "Optimized deployment with Docker, Nginx Proxy Manager, and CI/CD pipelines via GitHub Actions.",
+    ],
+    tags: ["Flutter", "Firebase", "AWS", "Docker", "CI/CD"],
+  },
+  {
+    type: "work" as const,
+    title: "Full Stack Flutter Developer",
+    org: "AuraVita",
+    period: "November 2024 — Present",
     location: "Remote",
     points: [
       "Designed & deployed a production-grade Android app with Flutter + Firebase, integrating real-time engagement via FCM and Analytics.",
@@ -18,21 +31,62 @@ const items = [
   },
   {
     type: "edu" as const,
-    title: "MCA in Generative AI",
+    title: "Master of Computer Applications in Generative AI",
     org: "SRM University, Chennai",
-    period: "Jul 2024 — Present",
+    period: "July 2024 — April 2026",
     location: "CGPA 9.16/10",
     points: ["Specializing in applied AI, deep learning, and modern app architecture."],
     tags: ["GenAI", "ML"],
   },
   {
+    type: "work" as const,
+    title: "PHP Web Developer Intern",
+    org: "Suvidha Foundation",
+    period: "November 2023 — December 2023",
+    location: "Remote",
+    points: [
+      "Made a PHP website to distribute course certificates to students associated with their organisation via email.",
+      "Foundation guided to use a pre-built template with Bootstrap/Tailwind",
+    ],
+    tags: ["HTML", "CSS", "JavaScript", "BootStrap", "PHP"],
+  },
+  {
+    type: "work" as const,
+    title: "Web Developer Intern",
+    org: "Navyug Think India Foundation",
+    period: "June 2022 — July 2022",
+    location: "Remote",
+    points: [
+      "Completed training and internship on a news website project, implemented a modular CSS architecture with core HTML to ensure code maintainability and scalability for a news website project.",
+    ],
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     type: "edu" as const,
-    title: "BCA",
+    title: "Bachelor of Computer Applications",
     org: "Amity University Rajasthan, Jaipur",
-    period: "Sep 2020 — May 2023",
+    period: "September 2020 — May 2023",
     location: "CGPA 7.93/10",
     points: ["Foundation in CS, web & mobile development, databases."],
     tags: ["CS Fundamentals"],
+  },
+  {
+    type: "edu" as const,
+    title: "Senior Secondary Education",
+    org: "Seedling Modern High School, Jaipur",
+    period: "March 2019 — March 2020",
+    location: "63.5%",
+    points: ["Completed senior secondary education from Seedling Modern High School in year 2020."],
+    tags: ["12th", "PCM/IP"],
+  },
+  {
+    type: "edu" as const,
+    title: "Secondary Education",
+    org: "Seedling Modern High School, Jaipur",
+    period: "March 2017 — March 2018",
+    location: "70.5%",
+    points: ["Completed secondary education from Seedling Modern High School in year 2018."],
+    tags: ["10th"],
   },
 ];
 
@@ -40,7 +94,7 @@ const Experience = () => {
   return (
     <section id="experience" className="relative py-28">
       <div className="container">
-        <SectionHeading index="02" title="Experience & Education" subtitle="The path so far." />
+        <SectionHeading index="02" title="Experience & Education" subtitle="The journey so far." />
 
         <div className="relative">
           {/* line */}
