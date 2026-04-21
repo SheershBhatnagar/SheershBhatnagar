@@ -134,17 +134,36 @@ const ProjectDetail = () => {
           className="mt-14"
         >
           <h2 className="font-display text-2xl font-semibold">Highlights</h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.08 } },
+            }}
+            className="mt-5 grid gap-3 sm:grid-cols-2"
+          >
             {project.highlights.map((h) => (
-              <div
+              <motion.div
                 key={h}
+                variants={{
+                  hidden: { opacity: 0, y: 20, scale: 0.96 },
+                  show: { opacity: 1, y: 0, scale: 1 },
+                }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                whileHover={{ y: -4, scale: 1.02 }}
                 className="glass flex items-center gap-3 rounded-xl p-4"
               >
-                <span className="h-2 w-2 flex-none rounded-full bg-primary" />
+                <motion.span
+                  className="h-2 w-2 flex-none rounded-full bg-primary"
+                  animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
                 <span className="text-sm text-foreground/90">{h}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.section>
 
         {/* Journey */}
@@ -157,22 +176,45 @@ const ProjectDetail = () => {
         >
           <h2 className="font-display text-2xl font-semibold">My journey</h2>
           <div className="relative mt-6">
-            <div className="absolute left-[11px] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-primary via-secondary to-transparent" />
-            <div className="space-y-6">
+            <motion.div
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              style={{ transformOrigin: "top" }}
+              className="absolute left-[11px] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-primary via-secondary to-transparent"
+            />
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-60px" }}
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
+              }}
+              className="space-y-6"
+            >
               {project.journey.map((step, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  variants={{
+                    hidden: { opacity: 0, x: -30 },
+                    show: { opacity: 1, x: 0 },
+                  }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                   className="relative pl-10"
                 >
-                  <div className="absolute left-0 top-1 grid h-6 w-6 place-items-center rounded-full bg-background ring-2 ring-primary">
+                  <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 + i * 0.15, type: "spring", stiffness: 200 }}
+                    className="absolute left-0 top-1 grid h-6 w-6 place-items-center rounded-full bg-background ring-2 ring-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]"
+                  >
                     <span className="font-mono text-[10px] text-primary">
                       {i + 1}
                     </span>
-                  </div>
+                  </motion.div>
                   <h3 className="font-display text-lg font-semibold">
                     {step.title}
                   </h3>
@@ -181,7 +223,7 @@ const ProjectDetail = () => {
                   </p>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -194,17 +236,32 @@ const ProjectDetail = () => {
           className="mt-16"
         >
           <h2 className="font-display text-2xl font-semibold">What I learned</h2>
-          <ul className="mt-5 space-y-3">
+          <motion.ul
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.1 } },
+            }}
+            className="mt-5 space-y-3"
+          >
             {project.learnings.map((l, i) => (
-              <li
+              <motion.li
                 key={i}
+                variants={{
+                  hidden: { opacity: 0, x: 30 },
+                  show: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                whileHover={{ x: 4, borderColor: "hsl(var(--secondary))" }}
                 className="glass flex gap-3 rounded-xl p-4 text-sm text-foreground/90"
               >
                 <span className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-secondary" />
                 <span>{l}</span>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.section>
 
         <div className="mt-20 flex justify-between border-t border-border pt-8">
