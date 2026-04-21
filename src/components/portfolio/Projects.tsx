@@ -1,37 +1,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Github } from "lucide-react";
+import { Apple, ArrowRight, Github, Play } from "lucide-react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import SectionHeading from "./SectionHeading";
-
-const projects = [
-  {
-    name: "Skiá Coffee App",
-    tag: "Flutter · Firebase",
-    period: "December 2024 — Present",
-    description: "A polished iOS & Android e-commerce app for a coffee brand. Auth, Firestore-backed catalog, payment via Cashfree, and CI/CD via GitHub Actions.",
-    stack: ["Flutter", "Firebase", "Cashfree", "Docker", "AWS", "GitHub Actions"],
-    accent: "from-primary to-secondary",
-    github: null,
-  },
-  {
-    name: "Gesturify",
-    tag: "Flutter · Flask · Hackfinity 1.0",
-    period: "November 2024 — December 2024",
-    description: "Sign-language interpreter that converts hand gestures into letters & words in real time. Led a 4-person team building Flutter app + Flask ML backend.",
-    stack: ["Flutter", "Flask", "Computer Vision", "REST API"],
-    accent: "from-secondary to-accent",
-    github: "https://github.com/Pratyushshrivas/Gesturify",
-  },
-  {
-    name: "Weather App",
-    tag: "Flutter · OpenWeather API",
-    period: "October 2023",
-    description: "Lightweight cross-platform weather app with location-based real-time forecasts via OpenWeatherAPI.",
-    stack: ["Flutter", "REST API", "Geolocation"],
-    accent: "from-primary to-accent",
-    github: "https://github.com/SheershBhatnagar/Weather-App",
-  },
-];
+import { projects } from "@/data/projects";
 
 const TiltCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -73,7 +45,7 @@ const Projects = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <motion.div
-              key={p.name}
+              key={p.slug}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -83,28 +55,40 @@ const Projects = () => {
               <TiltCard className="group relative h-full">
                 <div className={`absolute -inset-px rounded-2xl bg-gradient-to-br ${p.accent} opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-60`} />
                 <div className="glass relative flex h-full flex-col rounded-2xl p-6">
-                  <div className="mb-4 flex items-start justify-between">
-                    <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
-                    <div className="flex gap-2">
-                      {p.github ? (
-                        <a
-                          href={p.github}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label={`${p.name} on GitHub`}
-                          className="text-muted-foreground transition-colors hover:text-primary"
-                        >
-                          <Github className="h-4 w-4" />
-                        </a>
-                      ) : (
-                        <span
-                          title="Link not available"
-                          className="text-muted-foreground/30"
-                        >
-                          <Github className="h-4 w-4" />
-                        </span>
-                      )}
-                    </div>
+                  <div className="mb-4 flex items-start justify-end gap-3">
+                    {p.links.github && (
+                      <a
+                        href={p.links.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${p.name} on GitHub`}
+                        className="text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        <Github className="h-4 w-4" />
+                      </a>
+                    )}
+                    {p.links.playStore && (
+                      <a
+                        href={p.links.playStore}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${p.name} on Play Store`}
+                        className="text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        <Play className="h-4 w-4" />
+                      </a>
+                    )}
+                    {p.links.appStore && (
+                      <a
+                        href={p.links.appStore}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${p.name} on App Store`}
+                        className="text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        <Apple className="h-4 w-4" />
+                      </a>
+                    )}
                   </div>
 
                   <h3 className="font-display text-xl font-semibold">{p.name}</h3>
@@ -122,7 +106,16 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="mt-4 font-mono text-[11px] text-muted-foreground">{p.period}</div>
+                    <div className="mt-4 flex items-center justify-between">
+                      <div className="font-mono text-[11px] text-muted-foreground">{p.period}</div>
+                      <Link
+                        to={`/projects/${p.slug}`}
+                        className="group/link inline-flex items-center gap-1 font-mono text-[11px] text-primary transition-colors hover:text-primary-glow"
+                      >
+                        case study
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </TiltCard>
