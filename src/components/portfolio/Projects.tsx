@@ -91,7 +91,16 @@ const Projects = () => {
                     )}
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold">{p.name}</h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display text-xl font-semibold">{p.name}</h3>
+                    <Link
+                      to={`/projects/${p.slug}`}
+                      className="group/link inline-flex flex-none items-center gap-1 pt-1.5 font-mono text-[11px] text-primary transition-colors hover:text-primary-glow"
+                    >
+                      case study
+                      <ArrowRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5" />
+                    </Link>
+                  </div>
                   <p className="mt-1 font-mono text-xs text-primary">{p.tag}</p>
                   <p className="mt-3 text-sm text-muted-foreground">{p.description}</p>
 
@@ -106,16 +115,7 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="font-mono text-[11px] text-muted-foreground">{p.period}</div>
-                      <Link
-                        to={`/projects/${p.slug}`}
-                        className="group/link inline-flex items-center gap-1 font-mono text-[11px] text-primary transition-colors hover:text-primary-glow"
-                      >
-                        case study
-                        <ArrowRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5" />
-                      </Link>
-                    </div>
+                    <div className="mt-4 font-mono text-[11px] text-muted-foreground">{p.period}</div>
                   </div>
                 </div>
               </TiltCard>
