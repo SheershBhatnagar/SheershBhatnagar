@@ -11,7 +11,8 @@ const About = () => {
             <p>
               I'm a <span className="text-foreground">Full Stack Flutter Developer</span> currently
               shipping a production Android app at{" "}
-              <span className="text-primary">Decube Innovation Labs</span>. I love the bit where
+              <span className="text-primary">Decube Innovation Labs</span> & {" "}
+              <span className="text-primary">AuraVita</span>. I love the bit where
               design meets engineering — pixel-perfect UI on the front, well-architected
               infra on the back.
             </p>

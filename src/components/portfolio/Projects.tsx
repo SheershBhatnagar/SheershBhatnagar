@@ -9,8 +9,8 @@ const TiltCard = ({ children, className = "" }: { children: React.ReactNode; cla
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rx = useSpring(useTransform(y, [-50, 50], [8, -8]), { stiffness: 200, damping: 20 });
-  const ry = useSpring(useTransform(x, [-50, 50], [-8, 8]), { stiffness: 200, damping: 20 });
+  const rx = useSpring(useTransform(y, [-50, 50], [10, -10]), { stiffness: 200, damping: 20 });
+  const ry = useSpring(useTransform(x, [-50, 50], [-10, 10]), { stiffness: 200, damping: 20 });
 
   const onMove = (e: React.MouseEvent) => {
     const r = ref.current?.getBoundingClientRect();
@@ -128,14 +128,6 @@ const Projects = () => {
                       </div>
                       <div className="mt-4 flex items-center justify-between">
                         <div className="font-mono text-[11px] text-muted-foreground">{p.period}</div>
-                        <Link
-                          to={`/projects/${p.slug}`}
-                          onClick={(e) => e.stopPropagation()}
-                          className="group/link inline-flex items-center gap-1 font-mono text-[11px] text-primary transition-colors hover:text-primary-glow"
-                        >
-                          case study
-                          <ArrowRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5" />
-                        </Link>
                       </div>
                     </div>
                   </div>

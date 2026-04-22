@@ -25,19 +25,18 @@ export const projects: ProjectDetail[] = [
   {
     slug: "skia-coffee",
     name: "Skiá Coffee App",
-    tag: "Flutter · Firebase",
+    tag: "Flutter · Firebase · AWS",
     period: "December 2024 — Present",
     description:
-      "A polished iOS & Android e-commerce app for a coffee brand. Auth, Firestore-backed catalog, payment via Cashfree, and CI/CD via GitHub Actions.",
-    stack: ["Flutter", "Firebase", "Cashfree", "Docker", "AWS", "GitHub Actions"],
+      "A polished iOS & Android e-commerce app for a coffee brand. Firebase Auth, Firestore, payment via Cashfree, and CI/CD via GitHub Actions.",
+    stack: ["Flutter", "Firebase", "Cashfree", "Shiprocket", "Docker", "AWS", "GitHub Actions"],
     accent: "from-primary to-secondary",
     links: {
       github: null,
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.skiacoffee.skiacoffee&pcampaignid=web_share",
+      playStore: "https://play.google.com/store/apps/details?id=com.skiacoffee.skiacoffee&pcampaignid=web_share",
       appStore: "https://apps.apple.com/in/app/skiá-coffee/id6743938956",
     },
-    role: "Full Stack Mobile Developer",
+    role: "Full Stack Flutter Developer",
     overview:
       "Skiá Coffee is a production-grade e-commerce mobile app built end-to-end for a specialty coffee brand. From auth and catalog to payments and analytics, every layer is wired together for a smooth ordering experience on both iOS and Android.",
     journey: [
@@ -72,6 +71,56 @@ export const projects: ProjectDetail[] = [
       "Real-time orders with Firestore",
       "Cashfree payments integration",
       "CI/CD via GitHub Actions",
+    ],
+  },
+  {
+    slug: "xhunt",
+    name: "Hunt Local - Discovery App",
+    tag: "Flutter · Firebase · NodeJS · MongoDB · AWS",
+    period: "July 2025 — January 2026",
+    description: "A polished Android restaurant discovery e-commerce app. Firebase Auth, NodeJS + MongoDB Backend, payment via Razorpay, and AWS hosting.",
+    stack: ["Flutter", "Firebase", "NodeJS", "MongoDB", "Razorpay", "AWS"],
+    accent: "from-primary to-secondary",
+    links: {
+      github: null,
+      playStore: "https://play.google.com/store/apps/details?id=com.mobile.discovery_hunt&pcampaignid=web_share",
+      appStore: null,
+    },
+    role: "Flutter Developer",
+    overview:
+      "Hunt Local - Discovery App is a production-grade e-commerce mobile app built end-to-end for a restaurant discovery platform. From auth and catalog to payments and analytics, every layer is wired together for a smooth ordering experience on both iOS and Android.",
+    journey: [
+      {
+        title: "Discovery & architecture",
+        body:
+          "Mapped the customer journey with the founders, picked Flutter for a single codebase across iOS + Android, and chose Firebase for auth, Firestore, storage and analytics.",
+      },
+      {
+        title: "Catalog & checkout",
+        body:
+          "Built a dynamic catalog backed by Firestore with image caching, variants, and a checkout flow integrated with Cashfree for UPI, cards and netbanking.",
+      },
+      {
+        title: "Release engineering",
+        body:
+          "Set up GitHub Actions to build signed Android & iOS bundles, plus AWS-hosted services and Docker for the supporting backend pieces.",
+      },
+      {
+        title: "Launch & iteration",
+        body:
+          "Shipped to Play Store and App Store, then iterated on FCM-driven engagement, analytics dashboards and crash reporting.",
+      },
+    ],
+    learnings: [
+      "Designing data models in MongoDB that stay cheap as the restaurant catalog grows.",
+      "Hardening payment flows against retries, network drops, and webhook race conditions.",
+      "Owning the entire iOS release pipeline — provisioning, certificates, TestFlight, App Store Connect.",
+    ],
+    highlights: [
+      "Live on Play Store",
+      "Real-time orders with NodeJS + MongoDB",
+      "Razorpay payments integration",
+      "Managed backend on AWS",
     ],
   },
   {
@@ -127,7 +176,7 @@ export const projects: ProjectDetail[] = [
     slug: "weather-app",
     name: "Weather App",
     tag: "Flutter · OpenWeather API",
-    period: "October 2023",
+    period: "October 2023 — Present",
     description:
       "Lightweight cross-platform weather app with location-based real-time forecasts via OpenWeatherAPI.",
     stack: ["Flutter", "REST API", "Geolocation"],

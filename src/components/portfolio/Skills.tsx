@@ -6,8 +6,8 @@ const groups = [
   { name: "Backend", items: ["Python", "FastAPI", "Flask", "REST API"] },
   { name: "Data", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
   { name: "Cloud", items: ["AWS", "Azure", "GCP", "Firebase"] },
-  { name: "DevOps", items: ["Docker", "GitHub Actions", "Nginx Proxy Manager", "DNS Management"] },
-    { name: "Version Control", items: ["Git"] },
+  { name: "DevOps", items: ["Docker", "GitHub Actions", "Nginx", "DNS"] },
+    { name: "Version-Control", items: ["Git"] },
   { name: "Other", items: ["IoT", "Linux"] },
 ];
 

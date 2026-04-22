@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const links = [
   { id: "home", label: "home" },
   { id: "about", label: "about" },
-  { id: "experience", label: "work" },
+  { id: "experience", label: "journey" },
   { id: "projects", label: "projects" },
   { id: "skills", label: "skills" },
   { id: "contact", label: "contact" },
@@ -47,9 +47,8 @@ const Navbar = () => {
           <a
             key={l.id}
             href={`#${l.id}`}
-            className={`relative rounded-full px-3 py-1.5 font-mono text-xs transition-colors ${
-              active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
-            }`}
+            className={`relative rounded-full px-3 py-1.5 font-mono text-xs transition-colors ${active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
           >
             {active === l.id && (
               <motion.span
