@@ -52,7 +52,7 @@ const Projects = () => {
                 key={p.slug}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 style={{ perspective: 1000 }}
               >
