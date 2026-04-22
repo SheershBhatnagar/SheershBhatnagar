@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-28">
+    <section id="contact" className="relative py-20">
       <div className="container">
         <SectionHeading index="06" title="Let's build something" subtitle="The inbox is open." />
 
@@ -96,7 +96,7 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 font-mono text-xs text-muted-foreground sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-2 border-t border-border pt-5 font-mono text-[11px] text-muted-foreground sm:flex-row">
           <span>© {new Date().getFullYear()} Sheersh Bhatnagar</span>
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-terminal animate-pulse" />
