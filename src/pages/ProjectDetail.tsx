@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Apple, ArrowLeft, Github, Play } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useLayoutEffect } from "react";
-import CustomCursor from "@/components/portfolio/CustomCursor";
+import DesktopCustomCursor from "@/components/portfolio/DesktopCustomCursor";
 import { getProject } from "@/data/projects";
 import NotFound from "./NotFound";
 
@@ -22,7 +22,7 @@ const ProjectDetail = () => {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <CustomCursor />
+      <DesktopCustomCursor />
 
       {/* aurora */}
       <div className="pointer-events-none absolute inset-0 -z-10">

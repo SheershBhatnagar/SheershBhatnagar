@@ -1,25 +1,29 @@
-import About from "@/components/portfolio/About";
-import Awards from "@/components/portfolio/Awards";
-import Contact from "@/components/portfolio/Contact";
-import CustomCursor from "@/components/portfolio/CustomCursor";
-import Experience from "@/components/portfolio/Experience";
+import { lazy, Suspense } from "react";
+import DesktopCustomCursor from "@/components/portfolio/DesktopCustomCursor";
 import Hero from "@/components/portfolio/Hero";
 import Navbar from "@/components/portfolio/Navbar";
-import Projects from "@/components/portfolio/Projects";
-import Skills from "@/components/portfolio/Skills";
+
+const About = lazy(() => import("@/components/portfolio/About"));
+const Experience = lazy(() => import("@/components/portfolio/Experience"));
+const Projects = lazy(() => import("@/components/portfolio/Projects"));
+const Skills = lazy(() => import("@/components/portfolio/Skills"));
+const Awards = lazy(() => import("@/components/portfolio/Awards"));
+const Contact = lazy(() => import("@/components/portfolio/Contact"));
 
 const Index = () => {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <CustomCursor />
+      <DesktopCustomCursor />
       <Navbar />
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Awards />
-      <Contact />
+      <Suspense fallback={null}>
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Awards />
+        <Contact />
+      </Suspense>
     </main>
   );
 };
