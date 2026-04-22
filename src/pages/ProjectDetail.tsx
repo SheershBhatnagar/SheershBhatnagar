@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Apple, ArrowLeft, Github, Play } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import CustomCursor from "@/components/portfolio/CustomCursor";
 import { getProject } from "@/data/projects";
 import NotFound from "./NotFound";
@@ -10,8 +10,11 @@ const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProject(slug) : undefined;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
+  }, [slug]);
+
+  useEffect(() => {
     if (project) document.title = `${project.name} · Sheersh Bhatnagar`;
   }, [project]);
 
