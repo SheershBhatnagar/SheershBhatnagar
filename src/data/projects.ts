@@ -173,6 +173,55 @@ export const projects: ProjectDetail[] = [
     ],
   },
   {
+    slug: "ai-assistant",
+    name: "AI Assistant",
+    tag: "Flutter · OpenAI · ChatGPT · DALL-E",
+    period: "September 2025 — In development",
+    description:
+      "An in-development Flutter AI assistant app powered by ChatGPT and DALL-E APIs for natural conversations, question answering, and image generation.",
+    stack: ["Flutter", "Dart", "OpenAI API", "ChatGPT", "DALL-E", "REST API"],
+    accent: "from-primary to-secondary",
+    links: {
+      github: "https://github.com/SheershBhatnagar/AI-Assistant",
+    },
+    role: "Flutter Developer",
+    overview:
+      "AI Assistant is an in-development mobile app that brings conversational AI and image generation into a Flutter experience. It uses ChatGPT for natural language conversations and DALL-E for turning text prompts into generated visuals.",
+    journey: [
+      {
+        title: "Product direction",
+        body:
+          "Started with the goal of making a compact AI companion where users can ask questions, chat naturally, and explore generated images from prompts.",
+      },
+      {
+        title: "Flutter app foundation",
+        body:
+          "Built the mobile interface in Flutter with a focus on responsive chat interactions, clean input flows, and a smooth assistant-style experience.",
+      },
+      {
+        title: "AI integration",
+        body:
+          "Integrated OpenAI-powered chat and image-generation flows through API-driven communication between the app and backend pieces.",
+      },
+      {
+        title: "Still in development",
+        body:
+          "The project is actively evolving, with ongoing work around backend structure, Flutter polish, API handling, and user experience improvements.",
+      },
+    ],
+    learnings: [
+      "Designing a conversational mobile UI that feels fast and natural.",
+      "Working with OpenAI APIs for both text and image generation workflows.",
+      "Structuring Flutter and backend pieces so AI requests stay manageable as features grow.",
+    ],
+    highlights: [
+      "In development",
+      "ChatGPT-style conversations",
+      "DALL-E image generation",
+      "Flutter mobile app",
+    ],
+  },
+  {
     slug: "weather-app",
     name: "Weather App",
     tag: "Flutter · OpenWeather API",

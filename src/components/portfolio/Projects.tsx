@@ -61,6 +61,7 @@ const Projects = () => {
                   <div
                     role="link"
                     tabIndex={0}
+                    data-cursor="hover"
                     aria-label={`Open case study for ${p.name}`}
                     onClick={goToCase}
                     onKeyDown={(e) => {
