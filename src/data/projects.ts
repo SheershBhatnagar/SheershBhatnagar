@@ -14,6 +14,7 @@ export interface ProjectDetail {
   stack: string[];
   accent: string;
   links: ProjectLink;
+  status?: string;
   role: string;
   overview: string;
   journey: { title: string; body: string }[];
@@ -176,7 +177,7 @@ export const projects: ProjectDetail[] = [
     slug: "ai-assistant",
     name: "AI Assistant",
     tag: "Flutter · OpenAI · ChatGPT · DALL-E",
-    period: "September 2025 — In development",
+    period: "September 2025 — Present",
     description:
       "An in-development Flutter AI assistant app powered by ChatGPT and DALL-E APIs for natural conversations, question answering, and image generation.",
     stack: ["Flutter", "Dart", "OpenAI API", "ChatGPT", "DALL-E", "REST API"],
@@ -184,6 +185,7 @@ export const projects: ProjectDetail[] = [
     links: {
       github: "https://github.com/SheershBhatnagar/AI-Assistant",
     },
+    status: "In development",
     role: "Flutter Developer",
     overview:
       "AI Assistant is an in-development mobile app that brings conversational AI and image generation into a Flutter experience. It uses ChatGPT for natural language conversations and DALL-E for turning text prompts into generated visuals.",

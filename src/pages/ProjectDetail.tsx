@@ -54,6 +54,12 @@ const ProjectDetail = () => {
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
             <span className="text-gradient">{project.name}</span>
           </h1>
+          {project.status && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1.5 font-mono text-xs text-secondary shadow-[0_0_22px_hsl(var(--secondary)/0.18)]">
+              <span className="h-2 w-2 rounded-full bg-secondary shadow-[0_0_10px_hsl(var(--secondary)/0.7)]" />
+              {project.status} · not completed yet
+            </div>
+          )}
           <p className="mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">
             {project.overview}
           </p>
@@ -110,6 +116,11 @@ const ProjectDetail = () => {
               Timeline
             </div>
             <div className="mt-1 text-sm text-foreground">{project.period}</div>
+            {project.status && (
+              <div className="mt-3 inline-flex rounded-full border border-secondary/40 bg-secondary/10 px-2.5 py-1 font-mono text-[10px] text-secondary">
+                {project.status}
+              </div>
+            )}
           </div>
           <div className="glass rounded-2xl p-5">
             <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
