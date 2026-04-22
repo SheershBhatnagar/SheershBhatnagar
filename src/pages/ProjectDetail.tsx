@@ -129,7 +129,7 @@ const ProjectDetail = () => {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="mt-14"
         >
@@ -137,7 +137,7 @@ const ProjectDetail = () => {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, amount: 0.25 }}
             variants={{
               hidden: {},
               show: { transition: { staggerChildren: 0.08 } },
@@ -170,7 +170,7 @@ const ProjectDetail = () => {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="mt-16"
         >
@@ -179,7 +179,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: false, amount: 0.25 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               style={{ transformOrigin: "top" }}
               className="absolute left-[11px] top-2 h-[calc(100%-1rem)] w-px bg-gradient-to-b from-primary via-secondary to-transparent"
@@ -187,7 +187,7 @@ const ProjectDetail = () => {
             <motion.div
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: false, amount: 0.25 }}
               variants={{
                 hidden: {},
                 show: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
@@ -207,7 +207,7 @@ const ProjectDetail = () => {
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     whileInView={{ scale: 1, rotate: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.5 }}
                     transition={{ duration: 0.5, delay: 0.2 + i * 0.15, type: "spring", stiffness: 200 }}
                     className="absolute left-0 top-1 grid h-6 w-6 place-items-center rounded-full bg-background ring-2 ring-primary shadow-[0_0_12px_hsl(var(--primary)/0.5)]"
                   >
@@ -231,7 +231,7 @@ const ProjectDetail = () => {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           className="mt-16"
         >
@@ -239,7 +239,7 @@ const ProjectDetail = () => {
           <motion.ul
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, amount: 0.25 }}
             variants={{
               hidden: {},
               show: { transition: { staggerChildren: 0.1 } },
