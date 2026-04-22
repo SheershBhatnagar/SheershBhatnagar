@@ -97,7 +97,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-20 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 font-mono text-xs text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} Sheersh Bhatnagar — built from scratch with React, Tailwind & ☕</span>
+          <span>© {new Date().getFullYear()} Sheersh Bhatnagar</span>
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-terminal animate-pulse" />
             online
