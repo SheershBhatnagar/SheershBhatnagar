@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import portrait from "@/assets/sheersh-portrait.jpg";
@@ -29,6 +29,7 @@ const Hero = () => {
   }, [text, del, roleIdx]);
 
   return (
+    <LazyMotion features={domAnimation} strict>
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-24">
       {/* aurora blobs */}
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -39,7 +40,7 @@ const Hero = () => {
 
       <div className="container grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
         <div>
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -50,9 +51,9 @@ const Hero = () => {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             available for opportunities
-          </motion.div>
+          </m.div>
 
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -61,9 +62,9 @@ const Hero = () => {
             Hi, I'm <span className="text-gradient">Sheersh</span>
             <br />
             <span className="text-foreground/90">Bhatnagar</span>
-          </motion.h1>
+          </m.h1>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -71,9 +72,9 @@ const Hero = () => {
           >
             <span className="text-secondary">~/</span>
             <span className="text-foreground cursor-blink">{text}</span>
-          </motion.div>
+          </m.div>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -83,9 +84,9 @@ const Hero = () => {
             <span className="text-primary">Flutter</span>, wire them up to{" "}
             <span className="text-secondary">Firebase</span> &{" "}
             <span className="text-secondary">AWS</span>, and automate the boring parts with Docker + GitHub Actions.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -123,11 +124,11 @@ const Hero = () => {
                 <Mail className="h-5 w-5" />
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Portrait */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -148,15 +149,19 @@ const Hero = () => {
               <img
                 src={portrait}
                 alt="Sheersh Bhatnagar"
+                width="402"
+                height="520"
+                fetchPriority="high"
+                decoding="async"
                 className="relative h-full w-full rounded-2xl object-cover"
               />
             </div>
           </div>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* scroll hint */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
@@ -164,14 +169,15 @@ const Hero = () => {
       >
         <div className="flex flex-col items-center gap-2 font-mono text-xs text-muted-foreground">
           <span>scroll</span>
-          <motion.div
+          <m.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.6 }}
             className="h-8 w-[2px] bg-gradient-to-b from-primary to-transparent"
           />
         </div>
-      </motion.div>
+      </m.div>
     </section>
+    </LazyMotion>
   );
 };
 
