@@ -14,19 +14,27 @@ const Navbar = () => {
   const [active, setActive] = useState("home");
 
   useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
+    const updateActiveSection = () => {
+      const anchorLine = window.innerHeight * 0.35;
+      const visibleSection = links
+        .map((link) => document.getElementById(link.id))
+        .filter(Boolean)
+        .find((section) => {
+          const rect = section!.getBoundingClientRect();
+          return rect.top <= anchorLine && rect.bottom >= anchorLine;
         });
-      },
-      { rootMargin: "-40% 0px -55% 0px" }
-    );
-    links.forEach((l) => {
-      const el = document.getElementById(l.id);
-      if (el) obs.observe(el);
-    });
-    return () => obs.disconnect();
+
+      if (visibleSection) setActive(visibleSection.id);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
@@ -34,9 +42,9 @@ const Navbar = () => {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-1/2 top-4 z-50 -translate-x-1/2"
+      className="fixed left-1/2 top-3 z-50 w-[calc(100vw-1rem)] -translate-x-1/2 sm:top-4 sm:w-auto"
     >
-      <div className="glass flex items-center gap-1 rounded-full px-2 py-2 shadow-lg">
+      <div className="glass flex items-center justify-center gap-0 rounded-full px-1 py-1.5 shadow-lg sm:gap-1 sm:px-2 sm:py-2">
         <a
           href="#home"
           className="mr-2 hidden rounded-full bg-gradient-primary px-3 py-1.5 text-xs font-bold text-primary-foreground sm:block"
@@ -47,7 +55,8 @@ const Navbar = () => {
           <a
             key={l.id}
             href={`#${l.id}`}
-            className={`relative rounded-full px-3 py-1.5 font-mono text-xs transition-colors ${active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+            onClick={() => setActive(l.id)}
+            className={`relative rounded-full px-2 py-1.5 font-mono text-[10px] transition-colors sm:px-3 sm:text-xs ${active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
           >
             {active === l.id && (
