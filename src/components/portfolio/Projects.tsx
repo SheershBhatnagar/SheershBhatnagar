@@ -127,8 +127,13 @@ const Projects = () => {
                           </span>
                         ))}
                       </div>
-                      <div className="mt-4 flex items-center justify-between">
+                      <div className="mt-4 flex items-center justify-between gap-3">
                         <div className="font-mono text-[11px] text-muted-foreground">{p.period}</div>
+                        {p.status && (
+                          <span className="shrink-0 rounded-full border border-secondary/40 bg-secondary/10 px-2.5 py-1 font-mono text-[10px] text-secondary shadow-[0_0_18px_hsl(var(--secondary)/0.18)]">
+                            {p.status}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
