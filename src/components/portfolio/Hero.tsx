@@ -154,7 +154,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative mx-auto w-full max-w-sm"
+          className="relative mx-auto hidden w-full max-w-sm lg:block"
         >
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-primary opacity-30 blur-3xl animate-pulse-glow" />
           <div className="animate-float relative">
