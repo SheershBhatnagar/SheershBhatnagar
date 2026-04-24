@@ -43,12 +43,12 @@ const Navbar = () => {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-0 right-0 top-0 z-50 w-full sm:left-1/2 sm:right-auto sm:top-4 sm:w-auto sm:-translate-x-1/2"
+      className="fixed left-0 right-0 top-0 z-50 w-full lg:left-1/2 lg:right-auto lg:top-4 lg:w-auto lg:-translate-x-1/2"
     >
-      <div className="glass flex items-center justify-around gap-0 rounded-none px-2 py-2 shadow-lg sm:justify-center sm:gap-1 sm:rounded-full sm:px-2 sm:py-2">
+      <div className="glass flex items-center justify-around gap-0 rounded-none px-2 py-2 shadow-lg lg:justify-center lg:gap-1 lg:rounded-full lg:px-2 lg:py-2">
         <a
           href="#home"
-          className="mr-2 hidden rounded-full bg-gradient-primary px-3 py-1.5 text-xs font-bold text-primary-foreground sm:block"
+          className="mr-2 hidden rounded-full bg-gradient-primary px-3 py-1.5 text-xs font-bold text-primary-foreground lg:block"
         >
           SB
         </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
               href={`#${l.id}`}
               onClick={() => setActive(l.id)}
               aria-label={l.label}
-              className={`relative flex items-center justify-center rounded-full p-2 font-mono text-xs transition-colors sm:px-3 sm:py-1.5 ${
+              className={`relative flex items-center justify-center rounded-full p-2 font-mono text-xs transition-colors lg:px-3 lg:py-1.5 ${
                 active === l.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -71,8 +71,8 @@ const Navbar = () => {
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
-              <Icon className="relative h-5 w-5 sm:hidden" />
-              <span className="relative hidden sm:inline">{l.label}</span>
+              <Icon className="relative h-5 w-5 lg:hidden" />
+              <span className="relative hidden lg:inline">{l.label}</span>
             </a>
           );
         })}
