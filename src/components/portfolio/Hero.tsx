@@ -64,6 +64,28 @@ const Hero = () => {
             <span className="text-foreground/90">Bhatnagar</span>
           </m.h1>
 
+          {/* Mobile-only portrait, shown right after the name */}
+          <m.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative mx-auto mt-6 w-full max-w-[220px] lg:hidden"
+          >
+            <div className="absolute inset-0 -z-10 rounded-full bg-gradient-primary opacity-30 blur-3xl" />
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-2">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-primary opacity-50 blur-2xl" />
+              <img
+                src={portrait}
+                alt="Sheersh Bhatnagar"
+                width="402"
+                height="520"
+                fetchPriority="high"
+                decoding="async"
+                className="relative h-full w-full rounded-2xl object-cover"
+              />
+            </div>
+          </m.div>
+
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
